@@ -2,10 +2,47 @@
 <html>
 <head>
     <style>
-        body { margin: 0; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; background-color: #8B0000; color: #FFFFE0; font-family: monospace; }
-        h1 { font-size: 80px; margin: 0; font-weight: 900; }
-        .text { font-size: 20px; margin: 20px 0; min-height: 1.2em; }
-        .btn { padding: 15px 30px; border: 2px solid #FFFFE0; background: none; color: #FFFFE0; font-size: 20px; cursor: pointer; }
+        /* Thiết lập font monospace cho toàn bộ trang */
+        body { 
+            margin: 0; 
+            height: 100vh; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            background-color: #8B0000; 
+            color: #FFFFE0; 
+            font-family: 'Courier New', Courier, monospace; /* Font kiểu code đồng nhất */
+        }
+        
+        h1 { 
+            font-size: 80px; 
+            margin: 0; 
+            font-weight: 900; 
+            text-transform: uppercase;
+        }
+
+        .text { 
+            font-size: 20px; 
+            margin: 20px 0; 
+            min-height: 1.2em; 
+        }
+
+        .btn { 
+            padding: 15px 30px; 
+            border: 2px solid #FFFFE0; 
+            background: none; 
+            color: #FFFFE0; 
+            font-size: 20px; 
+            cursor: pointer; 
+            font-family: 'Courier New', Courier, monospace; /* Đồng bộ font với các chữ khác */
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #FFFFE0;
+            color: #8B0000;
+        }
     </style>
 </head>
 <body>

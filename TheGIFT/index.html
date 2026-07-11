@@ -3,36 +3,64 @@
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@700&display=swap" rel="stylesheet">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
         body { 
-            width: 100vw; height: 100vh;
-            display: flex; flex-direction: column; justify-content: center; align-items: center; 
+            margin: 0; 
+            min-height: 100vh; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
             background-image: url('IMG_5872.png');
-            background-size: cover; background-position: center; background-repeat: no-repeat;
-            color: #FFFFE0; font-family: sans-serif; overflow: hidden;
-            transition: background-image 0.2s;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #FFFFE0; 
+            font-family: sans-serif; 
         }
-
-        h1 { font-family: 'Lexend', sans-serif; font-size: 130px; text-transform: uppercase; margin: 0; }
-        .text { font-size: 40px; font-family: monospace; margin: 30px 0; min-height: 1.5em; }
         
-        .btn { 
-            padding: 12px 30px; border: 2px solid #FFFFE0; background: none; color: #FFFFE0; 
-            cursor: pointer; font-family: Impact, sans-serif; font-size: 30px;
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        h1 { 
+            font-family: 'Lexend', sans-serif; 
+            font-size: 100px; /* Nhỏ hơn một chút cho cân đối */
+            font-weight: 700; 
+            margin: 0; 
+            text-transform: uppercase;
+            text-shadow: 0 0 10px #FFFFE0, 0 0 20px #FFFFE0;
+            animation: fadeIn 2s ease-in;
         }
 
-        /* Hiệu ứng nhiễu màu RGB */
-        .glitch-active { animation: glitch 0.3s cubic-bezier(.25, .46, .45, .94) both; }
-        @keyframes glitch { 0% { transform: translate(0); } 20% { transform: translate(-5px, 5px); color: red; } 40% { transform: translate(-5px, -5px); color: cyan; } 100% { transform: translate(0); } }
+        .text { 
+            font-size: 30px; 
+            font-weight: bold; 
+            font-family: monospace; 
+            margin: 20px 0; 
+            min-height: 1.5em; 
+        }
+
+        .btn { 
+            font-family: Impact, sans-serif; 
+            font-size: 30px; 
+            font-weight: normal; 
+            padding: 12px 30px; 
+            border: 2px solid #FFFFE0; 
+            border-radius: 15px; 
+            background: none; 
+            color: #FFFFE0; 
+            cursor: pointer;
+            text-transform: lowercase; 
+            opacity: 0; 
+            animation: fadeIn 2s ease-in forwards;
+            animation-delay: 2s; 
+        }
     </style>
 </head>
 <body>
-    <h1 id="title">THE GIFT</h1>
+    <h1>THE GIFT</h1>
     <div id="welcome" class="text"></div>
-    <button class="btn" id="btn" onclick="triggerEffect()">enter hub</button>
+    <button class="btn" onclick="window.location.href='gift.html'">enter hub</button>
 
     <script>
-        // Hiệu ứng gõ chữ ban đầu
         function typeText(text, id, speed) {
             let i = 0;
             function type() {
@@ -44,20 +72,7 @@
             }
             type();
         }
-        setTimeout(() => typeText("WELCOME, THE EXCEPTION.", "welcome", 100), 1000);
-
-        // Hiệu ứng khi nhấn Enter
-        function triggerEffect() {
-            const title = document.getElementById('title');
-            title.classList.add('glitch-active');
-            
-            setTimeout(() => {
-                document.body.style.backgroundImage = "url('IMG_5885.png')";
-                document.getElementById('title').style.display = 'none';
-                document.getElementById('welcome').style.display = 'none';
-                document.getElementById('btn').style.display = 'none';
-            }, 300);
-        }
+        setTimeout(() => typeText("WELCOME, THE EXCEPTION.", "welcome", 100), 1500);
     </script>
 </body>
 </html>

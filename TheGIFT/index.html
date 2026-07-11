@@ -2,36 +2,32 @@
 <html>
 <head>
     <style>
-        body { 
-            margin: 0; 
-            height: 100vh; 
-            display: flex; 
-            flex-direction: column; 
-            justify-content: center; 
-            align-items: center; 
-            background-color: #8B0000; 
-            color: #FFFFE0; 
-            font-family: sans-serif;
-        }
-        h1 { 
-            font-size: 80px; 
-            margin: 0; 
-            font-weight: 900;
-        }
-        .text { font-size: 20px; margin: 20px 0; }
-        .btn { 
-            padding: 15px 30px; 
-            border: 2px solid #FFFFE0; 
-            background: none; 
-            color: #FFFFE0; 
-            font-size: 20px; 
-            cursor: pointer;
-        }
+        body { margin: 0; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; background-color: #8B0000; color: #FFFFE0; font-family: monospace; }
+        h1 { font-size: 80px; margin: 0; font-weight: 900; }
+        .text { font-size: 20px; margin: 20px 0; min-height: 1.2em; }
+        .btn { padding: 15px 30px; border: 2px solid #FFFFE0; background: none; color: #FFFFE0; font-size: 20px; cursor: pointer; }
     </style>
 </head>
 <body>
-    <h1>THE GIFT</h1>
-    <div class="text">welcome, the exception.</div>
+    <h1 id="title"></h1>
+    <div id="welcome" class="text"></div>
     <button class="btn" onclick="window.location.href='gift.html'">Enter Hub</button>
+
+    <script>
+        function typeText(text, id, speed) {
+            let i = 0;
+            function type() {
+                if (i < text.length) {
+                    document.getElementById(id).innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            type();
+        }
+        // Gọi hiệu ứng gõ
+        typeText("THE GIFT", "title", 150);
+        setTimeout(() => typeText("welcome, the exception.", "welcome", 100), 1500);
+    </script>
 </body>
 </html>

